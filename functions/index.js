@@ -44,7 +44,7 @@ exports.sendEmailToUser = functions.firestore
             subject: 'Message from Carlos Yanes',
             html: `<h4>Hello ${snap.data().name}</h4>
             <p> Hey, thanks for reaching out to me. You are receiving this because you send me a message through on my website!</p>
-            <p> <b>Your essage: ${snap.data().message} </b> </p>
+            <p> <b>Your message: ${snap.data().message} </b> </p>
             <p> I will contact you whithin 48 hours regarding about your message, thank you!</p>
             <br>
             <p> Warm regards,</p>
