@@ -21,6 +21,7 @@ const ContactForm = () => {
     })
   }
   const sendEmail = () => {
+      console.log(formData)
     Axios.post(
       'https://us-central1-your-app-name.cloudfunctions.net/submit',
       formData

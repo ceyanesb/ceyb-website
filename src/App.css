@@ -13,41 +13,6 @@
   align-items: center;
 }
 
-/* .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
 .Title{
   letter-spacing: 4px;
   font-size: 40px;
@@ -76,15 +41,110 @@
 
 .Contact {
   color:white;
+  border-radius: 0px 0px 0px 0px;
   background-color: black;
   padding: 15px 40px;
   font-size: 20px;
+  transition: all 250ms ease 250ms;
+  border: none;
+  font-family: 'Raleway';
+  letter-spacing: 2px;
 }
 
 .Contact:hover{
-  color:black;
-  background-color: transparent;
+  background-color: rgba(128, 128, 128, 0.705);
+  cursor: pointer;
+  transition: all 250ms ease 250ms;
 }
+
+.Contact2 {
+  color:white;
+  border-radius: 0px 0px 0px 0px;
+  background-color: black;
+  padding: 15px 40px;
+  font-size: 20px;
+  transition: all 250ms ease 250ms;
+  border: none;
+  font-family: 'Raleway';
+  margin-top: 40px;
+  letter-spacing: 2px;
+}
+
+.Contact2:hover{
+  background-color: rgba(128, 128, 128, 0.705);
+  cursor: pointer;
+  transition: all 250ms ease 250ms;
+}
+
+/* input::-webkit-input-placeholder {
+  background-color: transparent;
+  border-top: transparent 0px none;
+  border-left: transparent 0px none;
+  border-right: transparent 0px none;
+  border-bottom: black 1px solid;
+  margin: 20px;
+  outline: none;
+  background-color: whitesmoke;
+  width: 100%;
+  font-size: 1.5em;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  padding: 10px;
+  font-family: 'Raleway';
+  color:black
+}
+input::-moz-placeholder { 
+  background-color: transparent;
+  border-top: transparent 0px none;
+  border-left: transparent 0px none;
+  border-right: transparent 0px none;
+  border-bottom: black 1px solid;
+  margin: 20px;
+  outline: none;
+  background-color: whitesmoke;
+  width: 100%;
+  font-size: 1.5em;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  padding: 10px;
+  font-family: 'Raleway';
+  color:black
+}
+input:-ms-input-placeholder { 
+  background-color: transparent;
+  border-top: transparent 0px none;
+  border-left: transparent 0px none;
+  border-right: transparent 0px none;
+  border-bottom: black 1px solid;
+  margin: 20px;
+  outline: none;
+  background-color: whitesmoke;
+  width: 100%;
+  font-size: 1.5em;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  padding: 10px;
+  font-family: 'Raleway';
+  color:black
+}
+input:-moz-placeholder { 
+  background-color: transparent;
+  border-top: transparent 0px none;
+  border-left: transparent 0px none;
+  border-right: transparent 0px none;
+  border-bottom: black 1px solid;
+  margin: 20px;
+  outline: none;
+  background-color: whitesmoke;
+  width: 100%;
+  font-size: 1.5em;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  padding: 10px;
+  font-family: 'Raleway';
+  color:black
+} */
+
 
 .Footer {
   height:10vh;
@@ -100,4 +160,157 @@
 
 p{
   margin: 0 auto;
+}
+
+input{
+  background-color: transparent;
+  border-top: transparent 0px none;
+  border-left: transparent 0px none;
+  border-right: transparent 0px none;
+  border-bottom: black 1px solid;
+  margin: 20px;
+  outline: none;
+  background-color: whitesmoke;
+  font-size: 1.5em;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 10px;
+  width:100%;
+  font-family: 'Raleway';
+  color:black
+}
+
+input:focus{
+  background-color: transparent;
+  border-top: transparent 0px none;
+  border-left: transparent 0px none;
+  border-right: transparent 0px none;
+  border-bottom: blue 1px solid;
+  outline: none;
+  background-color: whitesmoke;
+}
+
+
+textarea{
+  resize: none;
+  outline: none;
+  background-color: whitesmoke;
+  border: none;
+  margin: 20px;
+  font-family: 'Raleway';
+  font-size: 1em;
+  color:black;
+  width:100%;
+  padding:10px;
+  border-radius: 5px;
+}
+
+.Form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.XButton {
+  position: absolute;
+  top:10px;
+  right:10px
+}
+
+.XButton:hover{
+  cursor: pointer;
+}
+
+.ModalTest{
+  box-shadow: 0px 0px 20px 1px grey;
+  border: none;
+  outline: none;
+}
+
+.Overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 320px) {
+  .ModalTest {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex:1;
+    justify-content: center;
+    align-items: center;
+  }
+  input{
+    width: 85%;
+  }
+  textarea{
+    width: 85%;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .ModalTest {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex:1;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .ModalTest {
+    position: relative;
+    padding:40px 110px;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .ModalTest {
+    position: relative;
+    padding:40px 110px;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .ModalTest {
+    position: relative;
+    padding:40px 110px;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .ModalTest {
+    position: relative;
+    padding:40px 110px;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+  }
 }

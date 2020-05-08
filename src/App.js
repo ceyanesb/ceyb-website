@@ -1,47 +1,62 @@
 import React from 'react';
 import './App.css';
-import ContactForm from './contact'
+import ContactForm from './components/Contact'
 import { FaInstagram, FaLinkedin, FaHeart } from "react-icons/fa";
+// import Modal from 'react-modal';
+import MyModal from './components/Modal'
 
-function App() {
-  return (
-    <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p style={{fontFamily:'Raleway'}}>
-          Edit <code>src/App.js</code> and save to reload. This will be my website
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+class App extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      showModal: false
+    }
+    this.handleOpenModal = this.handleOpenModal.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
+  }
+
+  handleOpenModal () {
+    this.setState({ showModal: true });
+  }
+  
+  handleCloseModal () {
+    this.setState({ showModal: false });
+  }
+  
+
+  render(){
+    return (
+      <div className="App">
+        <div className="Title">Carlos Yanes</div>
+        <hr style={{width:'10%'}}></hr>
+        <div className="Subtitle">coming soon</div>
+        <div className="Develop">
+          <div className="Items">Web Apps</div>
+          <div className="Items">Mobile Apps</div>
+          <div className="Items">E-Commerce</div>
+          <div className="Items">Landing Pages</div>
+          <div className="Items">Consulting</div>
+        </div>
+        <div onClick={this.handleOpenModal} className="Contact">CONTACT</div>
+        <MyModal
+          isOpen={this.state.showModal}
+          onRequestClose={this.handleCloseModal}
+          shouldCloseOnOverlayClick={true}
         >
-          Learn React
-        </a>
-      </header> */}
-      {/* <p>THIS WILL BE MY WEBSITE</p> */}
-      <div className="Title">Carlos Yanes</div>
-      <hr style={{width:'10%'}}></hr>
-      <div className="Subtitle">coming soon</div>
-      <div className="Develop">
-        <div className="Items">Web Apps</div>
-        <div className="Items">Mobile Apps</div>
-        <div className="Items">E-Commerce</div>
-        <div className="Items">Landing Pages</div>
-        <div className="Items">Consulting</div>
-      </div>
-      <div className="Contact">CONTACT</div>
-      <ContactForm />
-      <div className="Footer">
-        {/* <FontAwesomeIcon icon="coffee" />a */}
-        <FaInstagram/>
-        <FaLinkedin/>
-        <FaHeart/>
-      </div>
+          <ContactForm onRequestClose={this.handleCloseModal} />
+        </MyModal>
+        {/* <Modal/> */}
 
-    </div>
-  );
+
+        <div className="Footer">
+          <FaInstagram/>
+          <FaLinkedin/>
+          <FaHeart/>
+        </div>
+  
+      </div>
+    );
+  }
 }
 
 export default App;
